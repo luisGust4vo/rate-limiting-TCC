@@ -1,0 +1,17 @@
+estrategia,nivelDeCarga,conexoes,repeticoes,latenciaMediaMs,latenciaMediaDesvioPadrao,latenciaP99Ms,throughputReqPorSegundo,throughputDesvioPadrao,taxaBloqueioPercentual,taxaBloqueioDesvioPadrao,cpuMedioPercentual,cpuDesvioPadrao,memoriaMediaMb
+janelaDeslizante,baixa,10,3,2.55,0.16,8,20,0,0,0,0.03,0.03,56.98
+janelaDeslizante,noLimite,20,3,3.46,0.13,11.67,50,0,46.35,1.02,0.21,0.14,61.99
+janelaDeslizante,alta,50,3,6.48,0.71,22.67,100.1,0,64.29,3.3,0.61,0.16,65.95
+janelaDeslizante,estresse,100,3,8.13,0.04,32.67,300.37,0.15,84.48,0.55,0.91,0.03,74.7
+janelaFixa,baixa,10,3,2.87,0.29,9.33,20.1,0.1,0,0,0.34,0.08,56.62
+janelaFixa,noLimite,20,3,3.55,0.34,13,50.07,0.06,2.18,1.86,0.18,0.13,62.41
+janelaFixa,alta,50,3,6.37,0.09,22,100.17,0.12,48.89,0.85,0.01,0.01,66.14
+janelaFixa,estresse,100,3,8.43,0.3,35.33,300.77,0.6,82.85,0.89,0,0,76.97
+leakyBucket,baixa,10,3,2.56,0.26,7.67,20,0,0,0,0.06,0.02,57.74
+leakyBucket,noLimite,20,3,3.94,0.2,10.67,50.1,0.17,0,0,0.09,0.16,62.01
+leakyBucket,alta,50,3,6.64,0.12,19,100,0,47.52,0,0.79,0.01,63.38
+leakyBucket,estresse,100,3,8.44,0.31,32.33,300,0,82.26,0,0.62,0.4,77.62
+tokenBucket,baixa,10,3,2.63,0.04,8,20,0,0,0,0.1,0.15,57.86
+tokenBucket,noLimite,20,3,3.41,0.17,11.67,50,0,0,0,0.01,0.02,59.8
+tokenBucket,alta,50,3,6.19,0.19,22,100,0,47.59,0.06,0,0,66.04
+tokenBucket,estresse,100,3,8.48,0.31,34,300.13,0.23,82.26,0.03,0,0,76.89
