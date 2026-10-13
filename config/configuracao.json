@@ -1,0 +1,34 @@
+{
+  "porta": 3000,
+  "repeticoes": 3,
+  "diretorioResultados": "resultados",
+
+  "estrategias": ["janelaFixa", "janelaDeslizante", "tokenBucket", "leakyBucket"],
+
+  "parametrosEstrategias": {
+    "janelaFixa": {
+      "duracaoJanelaMs": 1000,
+      "maxRequisicoes": 50
+    },
+    "janelaDeslizante": {
+      "duracaoJanelaMs": 1000,
+      "maxRequisicoes": 50
+    },
+    "tokenBucket": {
+      "capacidade": 50,
+      "taxaRecargaPorSegundo": 50
+    },
+    "leakyBucket": {
+      "capacidade": 50,
+      "taxaVazamentoPorSegundo": 50
+    }
+  },
+
+  "_comentarioNiveisDeCarga": "taxaRequisicoesPorSegundo é aplicada via 'overallRate' do autocannon: o gerador de carga envia exatamente essa taxa (e não o máximo que a máquina aguentar). Isso permite comparar a taxa enviada diretamente com o limite configurado em cada estratégia (maxRequisicoes/capacidade = 50 por segundo), mostrando o comportamento abaixo, na borda e acima do limite.",
+  "niveisDeCarga": [
+    { "nome": "baixa",    "taxaRequisicoesPorSegundo": 20,  "conexoes": 10,  "duracaoSegundos": 10, "pipelining": 1 },
+    { "nome": "noLimite", "taxaRequisicoesPorSegundo": 50,  "conexoes": 20,  "duracaoSegundos": 10, "pipelining": 1 },
+    { "nome": "alta",     "taxaRequisicoesPorSegundo": 100, "conexoes": 50,  "duracaoSegundos": 10, "pipelining": 1 },
+    { "nome": "estresse", "taxaRequisicoesPorSegundo": 300, "conexoes": 100, "duracaoSegundos": 10, "pipelining": 1 }
+  ]
+}
